@@ -4,7 +4,7 @@
 // Author: 		Mike Ramsey
 // Modified by:
 // Created:
-// Copyright:	
+// Copyright:
 //===============================================================================
 
 
@@ -17,4 +17,5 @@ int main()
 	BowlingGame theGame;
 	theGame.configurePlayer();
 	theGame.play();
+	return 0;
 }
