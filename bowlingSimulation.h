@@ -11,6 +11,10 @@
 
 #include "bowlingPlayer.h"
 
+//===============================================================================
+
+static const int MaxPins = 10;
+
 enum FrameResult
 {
 	efr_Strike = 0,
@@ -47,5 +51,5 @@ protected:
 	void simulateRollAndScore(int releaseLane, FrameTally& tally);
 
 private:
-	array<int,10> m_pins;
+	array<int, MaxPins> m_pins;
 };
