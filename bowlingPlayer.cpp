@@ -28,13 +28,13 @@ void BowlingPlayer::updateAndGetWristFatigue(int bonus)
 		break;
 		case ReleaseStyle::ers_TwoHanded:
 			fatigue = 1; //-1
-			break; 
+		break; 
 		case ReleaseStyle::ers_UFO:
 			fatigue = 2;
-				break;
+		break;
 		case ReleaseStyle::ers_Backup:
 			fatigue = 3;
-			break;
+		break;
 	}	
 
 	// Delivery style impacts wrist fatigue
