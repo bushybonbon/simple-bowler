@@ -10,7 +10,7 @@
 
 #pragma once
 
-static int MaxWristFatigue = 5;
+static const int MaxWristFatigue = 5;
 
 enum ReleaseStyle
 {
