@@ -11,6 +11,8 @@
 #include "bowlingSimulation.h"
 #include "bowlingrandom.h"
 
+//===============================================================================
+
 BowlingSimulation::BowlingSimulation()
 {
 	resetPins();
@@ -47,7 +49,7 @@ int BowlingSimulation::generateReleaseLane(BowlingPlayer& player)
 	// Shift the releaselane left or right
 	// high wrist fatigue more variance on lane selected
 	 
-	int wristFatigue = std::min(player.getWristFatigue(), 3);
+	int wristFatigue = min(player.getWristFatigue(), 3);
 	releaseLane = StartingLane + (bias*wristFatigue);
 	
 	//Fake ball size by making the coarse lane sizes
@@ -59,37 +61,7 @@ int BowlingSimulation::generateReleaseLane(BowlingPlayer& player)
 	// needs to have while loop use a random cycle, and then a 
 	// check to end on the correct visual frame.
 	// Just a nice have.
-	/*
-	const int maxPosition = 6;
-	const int minPosition = 0;
-	int dir = 0;
-
-	string clear("       ");
-	string lane(clear);
-
-	while (1)
-	{
-		lane = clear;
-		lane [laneDeviation] = '*';
-		lane[3] = '|';
-		cout << lane << endl;
-					
-		dir == 0 ? ++laneDeviation : --laneDeviation;
-
-		//direction of lane movement
-		if (laneDeviation >= maxPosition)
-		{
-			dir = 1;
-		}
-		else
-		if (laneDeviation <= minPosition)
-		{
-			dir = 0;
-		}
 	
-		sleep_until(system_clock::now() + milliseconds(25));
-	}
-	*/
 	return releaseLane;
 }
 

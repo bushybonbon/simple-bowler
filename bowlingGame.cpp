@@ -11,6 +11,8 @@
 #include "pch.h"
 #include "bowlingGame.h"
 
+//===============================================================================
+
 BowlingGame::BowlingGame()
 {
 	// //#eventually take cmd args for test harness
@@ -19,16 +21,6 @@ BowlingGame::BowlingGame()
 void BowlingGame::configurePlayer()
 {
 	m_display.welcome();
-	//#todo# release and delivery styles are HC,
-	// dyanmic: Change these if you want to see some different action!!1
-	//int releaseStyle = 0;
-	//int deliveryStyle = 0;
-	//m_display.releaseStyle();
-	//cin >> releaseStyle;
-	//m_display.deliveryStyle();
-	//cin >> deliveryStyle;
-	//#todo#validate
-	
 	// HC delivery and release styles
 	// #note may need to tweak sim for new styles
 	m_player.setPlayerCharacteristics(DeliveryStyle::eds_Stroker,ReleaseStyle::ers_TwoHanded);
