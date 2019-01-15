@@ -20,25 +20,22 @@ void BowlingPlayer::updateAndGetWristFatigue(int bonus)
 	// lane selection influenced by release style
 	// #note eventually updated every frame so I can 
 	// accumulate wrist fatigue
-	if ( m_releaseStyle == ReleaseStyle::ers_Traditional)
+
+	switch (m_releaseStyle) 
 	{
-		fatigue = 1;
-	}
-	else
-		if (m_releaseStyle == ReleaseStyle::ers_TwoHanded)
-		{
-			fatigue = 1; //-1 
-		}
-		else
-			if (m_releaseStyle == ReleaseStyle::ers_UFO)
-			{
-				fatigue = 2;
-			}
-			else
-				if (m_releaseStyle == ReleaseStyle::ers_Backup)
-				{
-					fatigue = 3;
-				}
+		case ReleaseStyle::ers_Traditional:
+			fatigue = 1;
+		break;
+		case ReleaseStyle::ers_TwoHanded:
+			fatigue = 1; //-1
+			break; 
+		case ReleaseStyle::ers_UFO:
+			fatigue = 2;
+				break;
+		case ReleaseStyle::ers_Backup:
+			fatigue = 3;
+			break;
+	}	
 
 	// Delivery style impacts wrist fatigue
 	// which means it also contributes to poor lane selection 
